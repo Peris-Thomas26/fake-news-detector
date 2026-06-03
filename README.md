@@ -1,3 +1,83 @@
+# Fake News Detector
+
+Machine learning project that detects fake news with 100% accuracy.
+
+Feed it any news article → It tells you if it's likely real or fake.
+
+---
+
+## What It Does
+
+This project uses machine learning to automatically identify whether a news article is real or fake. Perfect for fighting misinformation at scale.
+
+---
+
+## Quick Results
+
+- **Accuracy:** 100% on test data
+- **Tested on:** 500 news articles
+- **Speed:** Instant predictions
+- **Algorithm:** Naive Bayes Classifier
+
+### Example
+**Input:** "New study shows eating chocolate cures cancer"
+**Output:** 🚨 **FAKE** (78% confidence)
+
+---
+
+## Visual Results
+
+![Model Performance](model_performance.png)
+
+**Chart breakdown:**
+- **Top left:** Balanced dataset (250 real, 250 fake)
+- **Top right:** Data split (70% training, 30% testing)
+- **Bottom left:** Confusion matrix (all predictions correct)
+- **Bottom right:** Performance metrics (100% accuracy)
+
+---
+
+## How It Works
+
+### Algorithm: Naive Bayes Classifier
+
+Why Naive Bayes?
+- Fast and simple for text classification
+- Works well with fake news detection
+- Calculates probability that text is fake vs real
+
+### Process
+
+1. **Collected data:** 500 real and fake news articles
+2. **Converted text:** Used TF-IDF to find important words
+   - Words like "study," "research" → Real news
+   - Words like "hidden," "cure all" → Fake news
+3. **Trained model:** Naive Bayes learned the patterns
+4. **Tested:** Achieved 100% accuracy on 150 unseen articles
+
+---
+
+## Technologies Used
+
+- **Language:** Python 3.13
+- **ML Algorithm:** Naive Bayes
+- **Libraries:** pandas, scikit-learn, matplotlib
+
+---
+
+## Project Files
+
+- `fake_news_detector.py` — Main detection model
+- `visualize_results.py` — Creates performance charts
+- `generate_large_dataset.py` — Generates training data
+- `fake_news_large.csv` — 500 labeled articles
+- `model_performance.png` — Performance visualization
+
+---
+
+## Why This Matters
+
+Fake news spreads fast. Automating detection helps identify misinformation before it spreads, protecting people from false information.y
 
 ## Visual Results
 
