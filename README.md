@@ -1,4 +1,35 @@
-# Fake News Detector
+
+## Visual Results
+
+![Model Performance](model_performance.png)
+
+The chart above shows:
+- **Top left:** Dataset has 250 real and 250 fake articles (balanced)
+- **Top right:** 350 articles used for training, 150 for testing
+- **Bottom left:** Confusion matrix shows the model got all predictions correct
+- **Bottom right:** Model achieved 100% accuracy on test data## How I built it
+
+**Algorithm Used:** Naive Bayes Classifier
+
+Why Naive Bayes?
+- Fast and simple for text classification
+- Works well with fake news detection
+- Calculates probability that text is fake vs real
+
+**Process:**
+1. Collected 500 real and fake news articles
+2. Converted text into numbers (TF-IDF vectorization)
+   - Identifies important words that signal fake vs real news
+3. Trained Naive Bayes to recognize patterns
+   - Learned which words appear more in fake news
+   - Learned which words appear more in real news
+4. Tested on 150 unseen articles
+   - Model correctly identified all 150 articles
+
+**Model Performance:**
+- Accuracy: 100%
+- Training set: 350 articles
+- Test set: 150 articles# Fake News Detector
 
 ## What does it do?
 This project identifies whether a news article is real or fake using machine learning.
